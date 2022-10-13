@@ -1,26 +1,67 @@
-html,
-body {
-  padding: 0;
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, Segoe UI, Roboto, Oxygen,
-    Ubuntu, Cantarell, Fira Sans, Droid Sans, Helvetica Neue, sans-serif;
-}
+@import url('https://fonts.googleapis.com/css2?family=Inconsolata&display=swap');
 
-a {
-  color: inherit;
-  text-decoration: none;
+:root {
+	--black: #111;
+	--white: #eee;
+	--dark-grey: #333;
+	--green: #39ff14;
+	--muted-green: #106200;
+	--algolia-purple: #5467FF;
+
+	--background-color: var(--black);
+	--secondary-background-color: var(--dark-grey);
+	--text-color: var(--green);
+	--muted-text-color: var(--muted-green);
+	--link-color: var(--algolia-purple);
+
+	--main-font: "Inconsolata", monospace;
 }
 
 * {
-  box-sizing: border-box;
+	box-sizing: border-box;
+	margin: 0;
+	padding: 0;
+	outline: 0;
+	border: 0;
+	font-family: var(--main-font);
+	color: var(--text-color);
+	transition: all 0.3s;
 }
 
-@media (prefers-color-scheme: dark) {
-  html {
-    color-scheme: dark;
-  }
-  body {
-    color: white;
-    background: black;
-  }
+body {
+	background: var(--background-color);
+}
+
+a {
+	color: var(--link-color);
+	text-decoration: none;
+}
+
+ol, ul {
+	list-style-type: none;
+}
+
+li {
+	width: 100%;
+	display: block;
+}
+
+input[type=input], input[type=search], select, button {
+	background: var(--secondary-background-color);
+	border-radius: 10px;
+	padding: 0.75em;
+	box-shadow: 2px 1px 3px var(--secondary-background-color);
+}
+
+select, button {
+	cursor: pointer;
+}
+
+::placeholder {
+	opacity: 1;
+	color: var(--muted-text-color);
+}
+
+::-ms-input-placeholder {
+	color: var(--muted-text-color);
 }

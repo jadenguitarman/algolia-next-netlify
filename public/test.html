@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<body>
+		<script
+			src="https://cdn.jsdelivr.net/npm/algoliasearch@4.14.2/dist/algoliasearch.umd.js"
+			integrity="sha256-DRnoUQAweVMsVPRMhfHC5zPqUP8s2fWUqD39yBsWg+M="
+			crossorigin="anonymous"
+		></script>
+		<script>
+			const client = algoliasearch(
+				'RZJ1O8RUTF',
+				'606fa9aab3ada0786376ca8fff4700a6'
+			);
+			const index = client.initIndex('restaurants');
+			index.search('', {
+				//aroundLatLng: '40.71, -74.01'
+			}).then(({ hits }) => {
+				console.log(hits);
+			});
+
+			index.search('', {
+				aroundLatLng: '40.71, -74.01'
+			}).then(({ hits }) => {
+				console.log(hits);
+			});
+		</script>
+	</body>
+</html>

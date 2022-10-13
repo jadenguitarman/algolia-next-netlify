@@ -1,129 +1,138 @@
-.container {
-  padding: 0 2rem;
-}
-
 .main {
-  min-height: 100vh;
-  padding: 4rem 0;
-  flex: 1;
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
+	display: flex;
+	flex-direction: column;
+	min-height: 100vh;
+	justify-content: space-between;
+	align-items: center;
+	padding: 5vh 5vw;
 }
 
-.footer {
-  display: flex;
-  flex: 1;
-  padding: 2rem 0;
-  border-top: 1px solid #eaeaea;
-  justify-content: center;
-  align-items: center;
+.main > *,
+.main ol {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	width: 100%;
+	flex-direction: column;
 }
 
-.footer a {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  flex-grow: 1;
+.main > h1 {
+	font-size: 8vh;
+	margin: 5vh 0;
 }
 
-.title a {
-  color: #0070f3;
-  text-decoration: none;
+.searchBox, .sortBy {
+	width: 100%;
+	height: 5vh;
+	margin: 2vh 0;
 }
 
-.title a:hover,
-.title a:focus,
-.title a:active {
-  text-decoration: underline;
+.searchBox form {
+	width: 100%;
+    height: 100%;
 }
 
-.title {
-  margin: 0;
-  line-height: 1.15;
-  font-size: 4rem;
+.searchBox input, .sortBy select {
+	width: 100%;
+    height: 100%;
+	border-radius: 10px;
+	padding: 0 10px;
+	font-size: 3vh;
+	text-align: center;
 }
 
-.title,
-.description {
-  text-align: center;
+.searchBox button {
+	display: none;
 }
 
-.description {
-  margin: 4rem 0;
-  line-height: 1.5;
-  font-size: 1.5rem;
+.cuisinesList ul {
+	line-height: 2em;
 }
 
-.code {
-  background: #fafafa;
-  border-radius: 5px;
-  padding: 0.75rem;
-  font-size: 1.1rem;
-  font-family: Menlo, Monaco, Lucida Console, Liberation Mono, DejaVu Sans Mono,
-    Bitstream Vera Sans Mono, Courier New, monospace;
+.cuisinesList li {
+	display: inline;
+	padding: 5px 10px;
+	background: var(--secondary-background-color);
+	margin: 5px;
+	border-radius: 5px;
+	white-space: nowrap;
 }
 
-.grid {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  flex-wrap: wrap;
-  max-width: 800px;
+.cuisinesList input[type=checkbox] {
+	display: none;
 }
 
-.card {
-  margin: 1rem;
-  padding: 1.5rem;
-  text-align: left;
-  color: inherit;
-  text-decoration: none;
-  border: 1px solid #eaeaea;
-  border-radius: 10px;
-  transition: color 0.15s ease, border-color 0.15s ease;
-  max-width: 300px;
+.cuisinesList input[type=checkbox]:checked + span::before {
+	content: "✅ ";
 }
 
-.card:hover,
-.card:focus,
-.card:active {
-  color: #0070f3;
-  border-color: #0070f3;
+.cuisinesList label {
+	cursor: pointer;
 }
 
-.card h2 {
-  margin: 0 0 1rem 0;
-  font-size: 1.5rem;
+.cuisinesList label :last-child {
+	font-size: 0.5em;
 }
 
-.card p {
-  margin: 0;
-  font-size: 1.25rem;
-  line-height: 1.5;
+.cuisinesList label :last-child::before {
+	content: " (";
 }
 
-.logo {
-  height: 1em;
-  margin-left: 0.5rem;
+.cuisinesList label :last-child::after {
+	content: ")";
 }
 
-@media (max-width: 600px) {
-  .grid {
-    width: 100%;
-    flex-direction: column;
-  }
+.hitsContainer {
+	min-height: 30vh;
 }
 
-@media (prefers-color-scheme: dark) {
-  .card,
-  .footer {
-    border-color: #222;
-  }
-  .code {
-    background: #111;
-  }
-  .logo img {
-    filter: invert(1);
-  }
+.hitsContainer button {
+	margin: 1vh 0;
+}
+
+.hit {
+	width: 100%;
+	height: 4vh;
+	font-size: 2vh;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	background: var(--secondary-background-color);
+	margin: 2px 0;
+	box-shadow: 2px 1px 3px var(--secondary-background-color);
+	border-radius: 10px;
+	padding: 0 10px;
+}
+
+.hit > .hitName {
+	width: 50%;
+}
+
+.hit > .hitCuisine, .hit > .hitPrice {
+	width: 25%;
+}
+
+.poweredBy {
+	margin-top: 5vh;
+	height: 5vh;
+	flex-direction: row;
+	justify-content: space-around;
+	align-items: center;
+}
+
+.poweredBy div {
+	display: flex;
+	flex-direction: row;
+	justify-content: center;
+	align-items: center;
+	height: 100%;
+}
+
+.poweredBy .netlify svg {
+	height: 100%;
+}
+
+.poweredBy .algolia svg {
+	height: 50%;
+	padding-left: 5px;
 }

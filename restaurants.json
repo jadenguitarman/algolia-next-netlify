@@ -1,0 +1,83 @@
+[
+	{
+		"name": "El Alteño",
+		"cuisine": "Mexican",
+		"averageEntreePrice": 7,
+		"_geoloc": {
+			"lat": 33.01446854285925,
+			"lng": -80.13768168569489
+		}
+	},
+	{
+		"name": "Mex 1",
+		"cuisine": "Mexican",
+		"averageEntreePrice": 19,
+		"_geoloc": {
+			"lat": 32.79043518659745,
+			"lng": -79.98704362482432
+		}
+	},
+	{
+		"name": "843",
+		"cuisine": "Korean",
+		"averageEntreePrice": 16,
+		"_geoloc": {
+			"lat": 32.9171285333984,
+			"lng": -80.02838752096307
+		}
+	},
+	{
+		"name": "82 Queen",
+		"cuisine": "Southern",
+		"averageEntreePrice": 29,
+		"_geoloc": {
+			"lat": 32.77792830515693,
+			"lng": -79.93249800376111
+		}
+	},
+	{
+		"name": "Husk",
+		"cuisine": "Southern",
+		"averageEntreePrice": 30,
+		"_geoloc": {
+			"lat": 32.77807366161602,
+			"lng": -79.93214142536492
+		}
+	},
+	{
+		"name": "Butcher & Bee",
+		"cuisine": "American",
+		"averageEntreePrice": 15,
+		"_geoloc": {
+			"lat": 32.81015919990262,
+			"lng": -79.94804627932857
+		}
+	},
+	{
+		"name": "Edmund's Oast",
+		"cuisine": "Brewery",
+		"averageEntreePrice": 12,
+		"_geoloc": {
+			"lat": 32.809968577290206,
+			"lng": -79.94741628155623
+		}
+	},
+	{
+		"name": "Holy City",
+		"cuisine": "Brewery",
+		"averageEntreePrice": 12,
+		"_geoloc": {
+			"lat": 32.87258761390893,
+			"lng": -79.97844017095257
+		}
+	},
+	{
+		"name": "The CODfather",
+		"cuisine": "Seafood",
+		"averageEntreePrice": 11,
+		"_geoloc": {
+			"lat": 32.8723967362654,
+			"lng": -79.97987675039543
+		}
+	}
+]
