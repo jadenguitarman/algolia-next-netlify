@@ -1,0 +1,8 @@
+.netlify svg {
+	height: 100%;
+}
+
+.algolia svg {
+	height: 50%;
+	padding-left: 5px;
+}

@@ -1,14 +1,20 @@
-import { NextResponse } from 'next/server';
+import { MiddlewareRequest } from "@netlify/next";
 
 export const config = {
 	matcher: '/'
 };
 
-export const middleware = async request => {
-	const response = NextResponse.next();
+export const middleware = async (request) => {
+	const middlewareRequest = new MiddlewareRequest(request);
+
+	const response = await middlewareRequest.next();
+
+	console.log(request.geo); // prints { country: "US", region: "SC", city: "Summerville" }
+	console.log(middlewareRequest.geo); // prints { country: "US", region: "SC", city: "Summerville" }
+
 	response.cookies.set(
 		'currentCoords',
-		`${request.geo.latitude /* ?? "32.77807830133121" */}, ${request.geo.longitude /* ?? "-79.92519141494746" */}`
+		`${request.geo.latitude}, ${request.geo.longitude}`
 	);
 	return response;
 };
