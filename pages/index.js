@@ -70,6 +70,8 @@ const Home = () => (
 					<NetlifyLogo />
 					<AlgoliaLogo />
 				</div>
+
+				<span>Template created by <a href="https://jaden.baptista.dev">Jaden Baptista</a> for <a href="/">an article collaboration between Netlify and Algolia</a></span>
 			</InstantSearch>
 		</main>
 	</>

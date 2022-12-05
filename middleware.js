@@ -10,7 +10,7 @@ export const middleware = async (request) => {
 
 	response.cookies.set(
 		'currentCoords',
-		`${request.geo.latitude}, ${request.geo.longitude}`
+		`${request.geo.latitude ?? "32.77807830133121"}, ${request.geo.longitude ?? "-79.92519141494746"}`
 	);
 	return response;
 };
