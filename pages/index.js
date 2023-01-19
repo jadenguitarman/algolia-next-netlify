@@ -39,6 +39,7 @@ const Home = () => (
 		<Head>
 			<title>Find a Restaurant</title>
 			<meta name="description" content="Find a Restaurant" />
+			<link rel="icon" type="image/x-icon" href="/favicon.png">
 		</Head>
 
 		<main className={styles.main}>
